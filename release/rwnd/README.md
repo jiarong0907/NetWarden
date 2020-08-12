@@ -87,7 +87,7 @@ sudo python setup_net_rate.py 10 1 0.1 del
 **To observe the TCP sending rate:**
 In the client side, you can capture packets using tcpdump and compute the sending rate yourself:
 ```
-sudo tcpdump -G 60 -W 1 -w rwnd_client.pcap
+sudo tcpdump -i ens3f0 -G 60 -W 1 -w rwnd_client.pcap
 ```
 
 or you can use our simple netspeed script to see the real time sending rate by:

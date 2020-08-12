@@ -114,7 +114,7 @@ sudo python setup_net_rate.py 15 3 0 del  # Westwood
 **To observe the TCP sending rate:**
 In the client side, you can capture packets using tcpdump and compute the sending rate yourself:
 ```
-sudo tcpdump -G 60 -W 1 -w timing.pcap
+sudo tcpdump -i ens3f0 -G 60 -W 1 -w timing.pcap
 ```
 
 or you can use our simple netspeed script to see the real time sending rate by:
